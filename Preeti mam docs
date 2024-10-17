@@ -1,0 +1,2181 @@
+chmod u+w goodoctor.zip
+
+
+sudo rm laufer-app.zip
+
+zip -r atlatik.zip atlatik
+
+sudo zip -r https://www.zip www
+
+
+apt install zip
+
+ls -l goodoctor_uat.zip
+
+unzip goodoctor_uat.zip
+
+sudo zip -r goodoctor-all-changes.zip goodoctor
+
+
+sudo zip -r laufer-app.zip laufer-app
+
+
+sudo zip -r React.zip React_app
+
+
+
+
+
+
+cp -r /var/www/goodoctor_uat_backup/storage /var/www/goodoctor_uat/storage
+
+sudo chown -R root:root /var/www/goodoctor_uat/storage
+
+sudo rm -rf /var/www/goodoctor_uat
+
+
+sudo rm -rf /var/www/goodoctor_uat_copy/app/Http/Controllers/Admin
+
+sudo rm -rf /var/www/goodoctor_uat_copy/resources/views/admin
+
+sudo rm -rf /var/www/goodoctor/resources/views/admin/keywords
+
+
+cp -r /var/www/goodoctor/app/Http/Controllers/Admin /var/www/goodoctor_uat_copy/app/Http/Controllers/Admin
+
+cp -r /var/www/goodoctor/resources/views/admin /var/www/goodoctor_uat_copy/resources/views/admin
+
+cp -r /var/www/goodoctor_uat/resources/views/admin/keywords /var/www/goodoctor/resources/views/admin/keywords
+
+
+
+sudo rm -rf node-aws-sample
+
+
+unzip event.zip
+
+
+
+sudo rm -rf /var/www/goodoctor-finalbackup.zip
+
+sudo rm -rf /var/www/goodoctor_uat-finalbackup.zip
+
+
+
+
+or create a new repository on the command line
+
+echo "# zips" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Preeti200430/zips.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/Preeti200430/zips.git
+git branch -M main
+git push -u origin main
+
+
+
+
+#!/bin/bash
+
+# Variables
+SERVER="p668844@31.220.120.147"
+PROJECT_DIR="/home/www/p668844/html"
+REPO_DIR="/home/www/p668844/html/test"
+
+# Ensure the repository directory exists
+if [ ! -d "$REPO_DIR" ]; then
+  echo "Repository directory $REPO_DIR does not exist. Cloning the repository."
+  git clone -b main mailto:git@github.com:harish285404/main.git $REPO_DIR
+fi
+
+# Pull latest changes from GitHub
+cd $REPO_DIR || { echo "Failed to change directory to $REPO_DIR"; exit 1; }
+git pull origin main || { echo "Git pull failed"; exit 1; }
+
+# Sync files to Mittwald server
+rsync -avz --delete-after $REPO_DIR/ $SERVER:$PROJECT_DIR || { echo "Rsync failed"; exit 1; }
+
+echo "Deployment to Mittwald server completed successfully."
+
+
+
+
+
+sudo nano /etc/nginx/sites-available/default
+
+server {
+    listen 80;
+    server_name 35.204.16.215;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api {
+        proxy_pass http://localhost:3000/api;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+sudo nginx -t
+
+sudo systemctl reload nginx
+
+sudo ufw allow 80/tcp
+sudo ufw allow 3000/tcp
+sudo ufw status
+
+
+
+setup ssl
+
+sudo apt-get update
+
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:certbot/certbot
+
+sudo apt-get update
+
+sudo apt-get install certbot python3-certbot-nginx
+ 
+sudo certbot --nginx -d https://www.baccvs.com
+
+//auto renewal
+sudo certbot renew --dry-run
+
+
+insatll node and npm
+
+
+in main root
+
+sudo apt install -y node
+
+sudo apt install -y npm
+
+
+
+echo "# BaccvsProNew" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/tsaids97/BaccvsProNew.git
+git push -u origin main
+
+
+
+https://awswithatiq.com/how-to-install-mongodb-in-ubuntu-inside-aws/
+
+
+https://sheets.googleapis.com/v4/spreadsheets/1bOufP8Uv4VAwHh_zdHX2xZjqgiTvPxx37uXVY9L-wCs/values/A:P?key=AIzaSyActXXP9zl2t2TzYKXqwAq5wz5udSuaPuQ
+
+https://www.universal-tutorial.com/rest-apis/free-rest-api-for-country-state-city
+
+
+https://restcountries.com/#endpoints-all
+
+
+https://webocreation.com/host-lamp-stack-in-aws-lightsail-opencart-hosting-in-aws/#gsc.tab=0
+
+
+
+https://gist.github.com/breekoy/9990ceb35833754c50b7e472b41f6ea7
+
+
+https://www.tecmint.com/fix-firewall-cmd-command-not-found-error/
+
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateWebServer.html
+
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-7
+
+
+
+
+
+
+
+
+Laravel
+
+mail passsword:tepgccwwsvevowua
+app name:testmail
+// generate env key
+
+ssh zip
+
+zip -r foldername.zip foldername *  
+
+cp .env.example .env
+php artisan key:generate
+php artisan key:generate –show
+
+// generate passport key
+
+
+php artisan passport:keys
+encryption keys already exists so I did 
+php artisan passport:keys --force
+
+
+php artisan make:seeder UserSeeder
+//seed command
+php artisan db:seed
+
+//refresh and add new column
+
+php artisan migrate:refresh --path=/database/migrations/2023_08_23_102830_create_products_table.php
+
+// create table command
+php artisan make:migration create_users_table --create=users
+
+// add new column without refresh data
+php artisan make:migration add_status_to_users_table
+
+// create table command
+
+php artisan make:migration create_orders_table
+
+//create controller command
+
+php artisan make:controller OrderController 
+
+//create middlewarwe command
+
+php artisan make:middleware FirstMiddleware
+
+//create model command
+
+php artisan make:model Order
+
+after every change of your routes, you need to launch command:
+
+php artisan route:clear
+
+Route::group(['middleware' => ['auth:api']], function () {
+});
+
+
+	
+public function getItemDetailsAttribute()//key name
+    {
+
+        $array  = $this->items;
+        
+       return $array;
+
+    }	
+	
+	
+	// to get key
+public function toArray()
+	{
+		$array = parent::toArray();
+		foreach ($this->getMutatedAttributes() as $key)
+		{
+			if ( ! array_key_exists($key, $array)) {
+				$array[$key] = $this->{$key};   
+				}
+		}
+			return $array;
+	}
+			
+	
+test@123 - $2y$10$9a.0MNieJbTuwruPnKEwruOLbjnmsl.Zq1Rf8kQJo9/3QchPEuJyq
+user@123 -$2y$10$QIpxl.p5D5UR3wdVIqDXL.xxrvT99Q0A93kQxzOE66EN8zSmtxW4C
+admin@123 -$2y$10$MrDLH1EjXWDtDoLTSObhxO1S5vSgMNrALTAChYySL2auDXFAdwhNS	
+
+firebase
+ $firebase = (new Factory)
+            ->withServiceAccount(__DIR__.'/omar-30f2c-firebase-adminsdk-1xjqt-080af8a4fa.json')
+            ->withDatabaseUri('https://omar-30f2c-default-rtdb.firebaseio.com/');
+ 
+        $database = $firebase->createDatabase();
+     //Get data
+            //     $blog = $database
+            //     ->getReference('Users/1');
+         
+            //     echo '<pre>';
+            //     print_r($blog->getvalue());
+            //     echo '</pre>';
+
+        //send data
+            // $postData = [
+            // 'customer' => 'John',
+            // 'email' => 'email@example.com'
+            // ];
+            // $postRef = $database->getReference('Users')->push($postData);
+            //  echo '<pre>';
+            //     print_r($postRef->getvalue());
+            //     echo '</pre>';
+	
+WhereIn for search ids in array
+
+base64 to image
+
+$image = $request->input('image');
+       $image = preg_replace('/^data:image\/\w+;base64,/', '', $image);
+       $image = str_replace(' ', '+', $image);
+       $imageName = time().'.'.'png';
+       \File::put(public_path('/colors'). '/' . $imageName, base64_decode($image));
+{{}} json_decode remove {} brackets
+when [{}] use [0]{}
+
+
+$validator = Validator::make($request->all(), [ 
+                'first_name' => 'required',
+                'last_name' => 'required',
+                'email' => 'required|string|unique:users',
+                'address' => 'required',
+                'phone' => 'required|string|min:10|max:10',
+                 'description' => 'required',
+                'password' => 'required|string',
+                'password_confirmation' => 'required|same:password',
+                'image' => 'required|mimes:jpeg,png,jpg,gif',
+            ]);
+
+             if($validator->fails()){
+
+                $errors   =   $validator->errors();
+                $messages = [];
+                foreach ($errors->all() as $message) {
+                    $messages[]  = $message;
+                    
+                }
+               return response()->json(['message'=>$messages], 401);
+
+            }
+
+laravel 7 passport 
+
+set guzzle 6.0
+
+add  "lcobucci/jwt": "3.3.3" in require section
+
+composer update
+
+
+composer require laravel/passport=~8.0 php 7
+
+Once the installation finishes, add the following provider in the config/app.php file:
+
+Laravel\Passport\PassportServiceProvider::class,
+Now, run the following command to migrate Laravel Passport tables:
+
+php artisan migrate
+Once all the tables have been migrated, run the following command to install it completely:
+
+php artisan passport:install
+auth.php
+ 'guards' => [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    ],
+
+socialite
+
+composer require laravel/socialite
+
+....
+....
+'providers' => [
+    ....
+    ....
+    Laravel\Socialite\SocialiteServiceProvider::class,
+],
+'aliases' => [
+    ....
+    ....
+    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+],
+....
+....
+
+use Illuminate\Support\Facades\Schema;
+
+add boot Schema::defaultStringLength(191);
+
+$ php artisan make:command sms:birthday
+
+ $(document).on('click','#invent-btn-g1',function(){
+                
+              //  var id= $(this).attr('data-id');
+                
+                $.ajax({
+    
+                    url: "{{ url('get-inventory-g1') }}",
+                    type: "GET",
+                    //data:{id:id},
+                    dataType: 'json',
+                    success: function (data) {
+                        
+                        // var oTable = $('#inventory-table').dataTable();
+                        // oTable.fnDraw(false); 
+                                          
+                    }
+                });
+            });
+
+
+ function get_styles_list()
+        {
+    
+            $('#styles-table').DataTable({
+                
+                processing: true,
+                serverSide: true,
+                
+                ajax: {
+                url: "{{ url('style-list') }}",
+                type: 'GET',
+                },
+                columns: [
+                {data: 'id', name: 'id', visible: false},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false,searchable: false},
+                { data: 'style_id', name: 'style_id' },
+                { data: 'title', name: 'title' },
+                { data: 'description', name: 'description' },
+                { data: 'styleImage', name: 'styleImage',"render": function (data, type, full, meta) {        
+                        return "<img src=\"" + data + "\" height=\"50\"/>";     
+                },      },
+                { data: 'status', name: 'status', visible: false},
+                //  { data: 'action', name: 'action'},
+            ]
+               
+            });
+        }
+        
+
+firebase
+
+ $SERVER_API_KEY = "AAAAvonCXx4:APA91bH0wR-SqoB5OOt9asWARqNT5rqAau7YGmz_5IxJV6shTN0AWa9IaLSdJxl5B872GkqGlKgRCQWQIRgXorVL8kTUBUm07QA4K26Z8HL1pn-oEpvJLnvhANfuSdFUMxFJm3qWwKq1";
+           
+        $notification_data = [
+                "to" => $dtoken,
+                    "notification" => [
+                          "icon"=>"http://student-vouchers.auspicioussoft.com/public/images/icon.png",
+                        "title" => "Uniplusco",
+                        "body" => "Welcome to uniplusco!",
+                        "content_available" => true,
+                        "priority" => "high",
+                    ]
+            ];
+               
+        $dataString = json_encode($notification_data);
+                   //die( $dataString);
+        $headers = [
+                'Authorization: key=' . $SERVER_API_KEY,
+                'Content-Type: application/json',
+            ];
+                
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
+
+        $response = curl_exec($ch);
+                 
+        $data = json_decode($response);
+
+
+datatable
+
+composer require yajra/laravel-datatables-oracle:"^10.0"
+
+Register provider and facade on your config/app.php file.
+
+'providers' => [
+    ...,
+    Yajra\DataTables\DataTablesServiceProvider::class,
+]
+
+'aliases' => [
+    ...,
+    'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+]
+
+php artisan vendor:publish --provider="Yajra\DataTables\DataTablesServiceProvider"
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laravel 8|7 Datatables Tutorial</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+<body>
+    
+<div class="container mt-5">
+    <h2 class="mb-4">Laravel 7|8 Yajra Datatables Example</h2>
+    <table class="table table-bordered yajra-datatable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Username</th>
+                <th>Phone</th>
+                <th>DOB</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    
+    var table = $('.yajra-datatable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('students.list') }}",
+        columns: [
+            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'username', name: 'username'},
+            {data: 'phone', name: 'phone'},
+            {data: 'dob', name: 'dob'},
+            {
+                data: 'action', 
+                name: 'action', 
+                orderable: true, 
+                searchable: true
+            },
+        ]
+    });
+    
+  });
+</script>
+</html>
+
+<?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+Route::get('students', [StudentController::class, 'index']);
+Route::get('students/list', [StudentController::class, 'getStudents'])->name('students.list');
+
+
+<?php
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Models\Student;
+use DataTables;
+class StudentController extends Controller
+{
+    public function index()
+    {
+        return view('welcome');
+    }
+
+    public function getStudents(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = Student::latest()->get();
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
+                    $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+ public function add_shape(Request $request)
+    {
+        $name = $request->input('name');
+       $image = $request->input('image');
+        $image = preg_replace('/^data:image\/\w+;base64,/', '', $image);
+       $image = str_replace(' ', '+', $image);
+       $imageName = time().'.'.'png';
+       \File::put(public_path('/shapes'). '/' . $imageName, base64_decode($image));
+
+      $data = new ShapeOption;
+      $data->name=$name;
+      $data->image=$imageName;
+      $data->save();
+     
+      return json_encode($data);
+
+    }
+
+
+<div class="container" >
+ <h3 style="float:left;margin-top: 10px;margin-bottom: 10px;">Shapes List</h3>
+    <a href="javascript:void(0)" class="add btn btn-primary btn-sm" style="float:right;margin-top: 10px;margin-bottom: 10px;" data-toggle="modal" data-target="#myModal">Add</a>
+
+<div class="main" >
+
+    <table  id="shapes-list-table" style="float:left;width:100%;">
+
+        <thead>
+
+            <tr>
+                      
+                <th>#</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+            <tbody>
+                        
+            </tbody>
+
+    </table>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title">Add Shapes</h4>
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body shape_data">
+    
+                        <div class="form-group mb-3">
+                            <label for="">Name</label>
+                             <input type="text" class="form-control" name="name" id="name" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="">Image</label>
+                             <input type="file" class="form-control" name="image_data" id="image_data"/ required>
+                        </div>
+                          <img id="preview-image" width="100px">
+                             <input type="hidden" name="image" id="image" >
+                             <div class="modal-footer">
+
+                                         <button class="btn btn-primary" type="button" id="addsahpe" data-dismiss="modal"> Submit</button>
+
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+                                      </div>                           
+               
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+ $('#addsahpe').click(function() {
+      
+        var name = $('#name').val();
+        var image = $('#image').val();
+        
+       //alert(image);
+       if(name=='') {
+
+            alert('Please enter shape name.');
+            return false;
+
+        } else if(image=='') {
+            
+            alert('Please select image.');
+            return false;
+
+        } 
+    else {
+        $.ajax({
+            url: "{{ url('/add-shapes') }}",
+            method: 'POST',
+            data:{
+                name:name,
+                image:image,
+            },
+            success: function (res) {
+               // alert(res);
+            }
+        });
+    }
+    });
+});
+
+
+<script>
+   
+        $(document).on('click','#delAdminTask', function() {
+            
+    
+          var id = $(this).attr('data-id');
+          var url = "{{url('userdelete', '')}}"+"/"+id;
+          //alert(date);
+         window.location.href = url;
+        
+    });
+</script>
+headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   }
+
+
+
+
+
+
+
+
+
+
+
+public function getUserImageUrlAttribute()
+    {   
+        if($this->image != null)
+        {
+            $image = '/uploads/'.$this->image;
+        }
+        else
+        {
+            $image = '/images/Profile_pic_imageholder.png';
+        }
+        return  $image ;
+    }
+   
+        public function toArray()
+    {
+        $array = parent::toArray();
+        foreach ($this->getMutatedAttributes() as $key)
+        {
+            if ( ! array_key_exists($key, $array)) {
+                $array[$key] = $this->{$key};   
+            }
+        }
+        return $array;
+    }
+
+
+<link  href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+				   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+				  
+				<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" defer></script> 
+//laravel 8
+
+composer require yajra/laravel-datatables-oracle:^9.21.2
+
+
+
+
+Admin panel
+
+
+
+1. install laravel package   
+composer create-project --prefer-dist laravel/laravel:^7.0 blog
+
+2. Auth command and npm install
+
+composer require laravel/ui:^2.4
+php artisan ui vue --auth
+npm install
+npm run dev
+
+3. create database
+
+4. before migration add ( $table->integer('role')->default('0'); ) field in user table then run migration command php artisan migrate
+
+5. loginController
+use Auth;
+
+comment =  protected $redirectTo = RouteServiceProvider::HOME;
+
+public function authenticated(){
+        if(Auth::user()->role == "1")//1=admin 
+        {
+            return redirect('admin/dashboard')->with('status','welcome to Admin Dashboard');
+        }
+        else if(Auth::user()->role == "0")//0=normal user
+        {
+            return redirect('/home')->with('status','you successfully logged in');
+        }
+        else{
+            return redirect('/');
+        }
+    }
+	
+6. create middlewere 
+
+php artisan make:middleware AdminMiddleware
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+public function handle(Request $request, Closure $next)
+    {
+        if(Auth::check())
+        {
+            if(Auth::user()->role == '1')//here "1" is admin and "0" is commen user
+            {
+                 return $next($request);
+
+            }
+            else{
+                 return redirect('/home')->with('status','Access denied as you are not an admin');
+            }
+        }
+        else{
+            return redirect('/login')->with('status','please login first');
+        }
+    }
+	
+7. kernel.php
+
+protected $routeMiddleware = ['isAdmin' => \App\Http\Middleware\AdminMiddleware::class,]
+
+8. create admin folder in views and create dashboard.blade.php
+
+9. views/layouts    
+   create folder then create blade files(header,footer,sidebar)
+   
+10. then create master file in views/layouts 
+
+<html>
+    <body>
+    @include('layouts.folder_name.navbar')
+        <div id="layoutSidenav">
+        @include('layouts.folder_name.sidebar')
+        <div id="layoutSidenav_content">
+          
+        <main>
+           @yield('content')
+        </main>
+        @include('layouts.folder_name.footer')
+    </body>
+</html>
+
+
+11. create admin folder in controller then create Controller 
+ php artisan make:controller Admin/AdminController
+
+ public function index(){
+           return view('admin.dashboard');
+    }
+
+12. then define route for middleware 
+
+Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
+    Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index']);
+});
+
+13. run commend php artisan serve
+
+laravel 7 version 
+composer require laravel/ui=~2.0
+
+php artisan ui bootstrap --auth
+
+npm install && npm run dev
+
+for sidebar active add class in anchor tag class="{{ Request::segment(1) === 'home' ? 'active' : null }}" href="{{ route('home') }}"
+
+
+
+#CB293F
+
+
+
+Social Login
+
+
+<?php
+
+namespace App\Http\Controllers\API\Student;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\User_meta;
+use Auth;
+use Socialite;
+use Carbon\Carbon;
+use App\Models\Student_notifications;
+use App\Models\Language;
+use App\Models\User_otp;
+use DB;
+use App\Models\Device_token;
+use App\Models\Notification;
+
+class SocialLoginController extends Controller
+{   
+
+    /* login with Google */
+    public function googleLogin(Request $request)
+    {
+        $provider = 'google'; 
+
+        $fb_token = $request->google_token;
+
+        $dtoken = $request->token;
+
+        $providerUser = Socialite::driver($provider)->userFromToken($fb_token);  
+    
+        $user = User_meta::where('google_id', $providerUser->id)->first();   
+        //print_r($user->user_id);
+        $user_data = User::where('id',$user->user_id)->first();
+       
+        if($user==null)
+        {
+
+            return response()->json([
+                'message' => 'Invalid credentials.'
+                ], 401);
+        }    // create a token for the user, so they can login
+       
+        $email = $providerUser->email;
+
+        $users = DB::select('select * from users where email = ?',[$email]);
+
+        if($users[0]->status=='2')
+        {
+            return response()->json([ 'message' => 'User rejected by admin.'], 452);
+        }
+
+        else if(!$users[0]->is_blocked=='0')
+        {
+            return response()->json(['message' => 'User is blocked by admin.'], 454);
+        }
+
+        else if($users[0]->status=='0')
+        {
+            return response()->json(['message' => 'User approval pending from admin.'], 455);
+        }
+
+        $tokenResult = $user_data->createToken('Personal Access Token');
+        
+        $token = $tokenResult->token;
+
+        $token->expires_at = Carbon::now()->addHours(24);
+
+        $token->save();
+
+
+      $device_token_data= Device_token::where('user_id',$users[0]->id)->get(['id']);
+
+        if(sizeof($device_token_data))
+        {   
+             $device_tokens= Device_token::where('user_id',$users[0]->id)->update(['token'=>$dtoken]);
+        }
+        else{
+
+        $device_token = new Device_token;
+
+        $device_token->user_id = $users[0]->id;
+
+        $device_token->token = $dtoken;
+
+        $device_token->save();
+        }   
+
+           $SERVER_API_KEY = "AAAAvonCXx4:APA91bH0wR-SqoB5OOt9asWARqNT5rqAau7YGmz_5IxJV6shTN0AWa9IaLSdJxl5B872GkqGlKgRCQWQIRgXorVL8kTUBUm07QA4K26Z8HL1pn-oEpvJLnvhANfuSdFUMxFJm3qWwKq1";
+               
+        $notification_data = [
+                "to" => $dtoken,
+                    "notification" => [
+                         "icon"=>"http://student-vouchers.auspicioussoft.com/public/images/icon.png",
+                        "title" => "Uniplusco",
+                        "body" => "Welcome to uniplusco!",
+                        "content_available" => true,
+                        "priority" => "high",
+                    ]
+            ];
+               
+        $dataString = json_encode($notification_data);
+                   //die( $dataString);
+        $headers = [
+                'Authorization: key=' . $SERVER_API_KEY,
+                'Content-Type: application/json',
+            ];
+                
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
+
+        $response = curl_exec($ch);
+                 
+        $data = json_decode($response);
+
+        $notifications = new Notification;
+
+        $notifications->user_id = $users[0]->id;
+
+        $notifications->subject = "Uniplusco";
+
+        $notifications->message =  "Welcome to uniplusco!";
+
+         $notifications->image = "icon.png";
+
+        $notifications->save();
+
+        return response()->json([
+
+            'access_token' => $tokenResult->accessToken,
+
+            'token_type' => 'Bearer',
+
+            'expires_at' => Carbon::parse(
+
+                $tokenResult->token->expires_at
+
+            )->toDateTimeString(),
+
+            'verified'=>$users[0]->verified,
+
+            'user_id'=>$users[0]->id,
+
+            // 'email'=>$users[0]->email
+
+        ]);
+        
+    }
+
+    /* signup with Google */
+    public function googlesignup(Request $request)
+    {
+
+        $provider = 'google'; 
+
+        $fb_token = $request->google_token;
+        
+        $university_email = $request->university_email;
+        
+        $otp = $request->otp;
+
+        $providerUser = Socialite::driver($provider)->userFromToken($fb_token);  
+    
+        $user = User_meta::where('google_id', $providerUser->id)->first();
+
+        $optdata = User_otp::where('email',$university_email)->where('otp',$otp)->get();
+
+        if(sizeof($optdata))
+        {
+            if($user == null)
+            {
+
+                $data =  array( 'email_verified_at' => Carbon::now(),
+                        'first_name' => $providerUser->name,
+                         'last_name' => $providerUser->name,
+                        'email' => $providerUser->email,
+                        'user_type'=>'2',
+                        'status'=>'0',
+                        'verified'=>'1');
+
+                $email = $providerUser->email;
+
+                $user_data = DB::table('users')->insert($data);
+
+                $users = DB::select('select * from users where email = ?',[$email]);
+            
+                $stu_id = rand(1000,9999);
+
+                $student_id = 'ID'.$stu_id;
+
+                $values = array (  'user_id' => $users[0]->id,
+                    'student_id' =>  $student_id,
+                    'university_email'=>$request->university_email,
+                    'google_id' => $providerUser->id);
+
+               $user_meta = DB::table('user_metas')->insert($values);
+            
+               $languages = new Language;
+
+               $languages->user_id = $users[0]->id;
+
+               $languages->language = $language;
+
+               $languages->save();
+            }    // create a token for the user, so they can login
+       
+            $email = $providerUser->email;
+
+            $users = DB::select('select * from users where email = ?',[$email]);
+       
+          return response()->json(['status_code'=>1,'status_text'=> 'Success','message'=>'User created successfully !','user_id'=>$users[0]->id]);
+        
+        }
+
+        else
+        {
+            return response()->json(['status_code'=>0,'status_text'=> 'Success','message'=>'University Email not verified!']); 
+        }   
+
+
+     }    
+
+    /* login with Facebook */
+    public function facebookLogin(Request $request)
+    {
+            $provider = 'facebook';  
+
+            $fb_token = $request->fb_token;
+
+            $dtoken = $request->token;
+
+            $providerUser = Socialite::driver($provider)->userFromToken($fb_token);  
+            
+            $user = User_meta::where('facebook_id', $providerUser->id)->first();    // if there is no record with these data, create a new user
+             $user_data = User::where('id',$user->user_id)->first();
+       
+            if($user==null)
+            {
+
+                return response()->json([
+                'message' => 'Invalid credentials.'
+                ], 401);
+            }
+
+            $email = $providerUser->email;
+
+            $users = DB::select('select * from users where email = ?',[$email]);
+       
+            if($users[0]->status=='2')
+            {
+               return response()->json(['message' => 'User rejected by admin.'], 452);
+            }
+
+            else if(!$users[0]->is_blocked=='0')
+            {
+                return response()->json(['message' => 'User is blocked by admin.'], 454);
+            }
+
+            else if($users[0]->status=='0')
+            {
+                return response()->json(['message' => 'User approval pending from admin.'], 455);
+            }
+
+            $tokenResult = $user_data->createToken('Personal Access Token');
+    
+            $token = $tokenResult->token;
+
+            $token->expires_at = Carbon::now()->addHours(24);
+
+            $token->save();
+
+            $device_token_data= Device_token::where('user_id',$users[0]->id)->get(['id']);
+
+        if(sizeof($device_token_data))
+        {   
+             $device_tokens= Device_token::where('user_id',$users[0]->id)->update(['token'=>$dtoken]);
+        }
+        else{
+
+        $device_token = new Device_token;
+
+        $device_token->user_id = $users[0]->id;
+
+        $device_token->token = $dtoken;
+
+        $device_token->save();
+        }   
+
+           $SERVER_API_KEY = "AAAAvonCXx4:APA91bH0wR-SqoB5OOt9asWARqNT5rqAau7YGmz_5IxJV6shTN0AWa9IaLSdJxl5B872GkqGlKgRCQWQIRgXorVL8kTUBUm07QA4K26Z8HL1pn-oEpvJLnvhANfuSdFUMxFJm3qWwKq1";
+               
+            $notification_data = [
+                     "to" => $dtoken,
+                        "notification" => [
+                             "icon"=>"http://student-vouchers.auspicioussoft.com/public/images/icon.png",
+                            "title" => "Uniplusco",
+                            "body" => "Welcome to uniplusco!",
+                            "content_available" => true,
+                            "priority" => "high",
+                        ]
+                ];
+                   
+            $dataString = json_encode($notification_data);
+                       //die( $dataString);
+            $headers = [
+                    'Authorization: key=' . $SERVER_API_KEY,
+                    'Content-Type: application/json',
+                ];
+                    
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $dataString);
+
+            $response = curl_exec($ch);
+                     
+            $data = json_decode($response);
+
+            $notifications = new Notification;
+
+            $notifications->user_id = $users[0]->id;
+
+            $notifications->subject = "Uniplusco";
+
+            $notifications->message =  "Welcome to uniplusco!";
+
+            $notifications->image = "icon.png";
+
+            $notifications->save();
+
+            return response()->json([
+                
+                'access_token' => $tokenResult->accessToken,
+
+                'token_type' => 'Bearer',
+
+                'expires_at' => Carbon::parse(
+
+                    $tokenResult->token->expires_at
+
+                )->toDateTimeString(),
+
+                'verified'=>$users[0]->verified,
+
+                'user_id'=>$users[0]->id,
+
+                // 'email'=>$users[0]->email
+
+            ]);
+        
+    } 
+     
+   /* signup with Facebook */  
+   public function facebooksignup(Request $request)
+   {
+        $provider = 'facebook';  
+
+        $fb_token = $request->fb_token;
+
+        $language = $request->language; 
+
+        $university_email = $request->university_email;
+
+        $otp = $request->otp;
+
+        $providerUser = Socialite::driver($provider)->userFromToken($fb_token);  
+        
+        $user = User_meta::where('facebook_id', $providerUser->id)->first();    // if there is no record with these data, create a new user
+        
+        $optdata = User_otp::where('email',$university_email)->where('otp',$otp)->get();
+
+        if(sizeof($optdata))
+        {
+
+           if($user == null)
+           {
+
+               $data =  array( 'email_verified_at' => Carbon::now(),
+                        'first_name' => $providerUser->name,
+                         'last_name' => $providerUser->name,
+                        'email' => $providerUser->email,
+                        'user_type'=>'2',
+                        'status'=>'0',
+                        'verified'=>'1');
+
+                $email = $providerUser->email;
+
+                $user_data = DB::table('users')->insert($data);
+
+                $users = DB::select('select * from users where email = ?',[$email]);
+                
+                $stu_id = rand(1000,9999);
+
+                $student_id = 'ID'.$stu_id;
+
+                $values = array (  'user_id' => $users[0]->id,
+                        'student_id' =>  $student_id,
+                        'university_email'=>$request->university_email,
+                        'facebook_id' => $providerUser->id);
+
+                $user_meta = DB::table('user_metas')->insert($values);
+
+                $languages = new Language;
+
+                $languages->user_id = $users[0]->id;
+
+                $languages->language = $language;
+
+                $languages->save();
+            }    // create a token for the user, so they can login
+
+            $email = $providerUser->email;
+
+            $users = DB::select('select * from users where email = ?',[$email]);
+       
+           
+            return response()->json(['status_code'=>1,'status_text'=> 'Success','message'=>'User created successfully !','user_id'=>$users[0]->id]);
+        }
+
+        else
+        {
+            return response()->json(['status_code'=>0,'status_text'=> 'Success','message'=>'University Email not verified!']); 
+        }
+   }
+}
+
+
+
+
+
+Elastic search
+
+
+elaticsearch
+
+
+elatic serch curl 
+
+https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200
+
+
+
+
+
+
+
+
+
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'PUT',
+  CURLOPT_POSTFIELDS =>'{   
+"settings" : {  
+      "index" : {  
+         "number_of_shards" : 4,  
+         "number_of_replicas" : 3  
+      }  
+   }  
+}  ',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_doc',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "domain":"elastic",
+    "username":"hmokimoku",
+    "password":"paglnhjbhb",
+    "iso":"AO"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_search',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_POSTFIELDS =>'    {
+      "query": {
+        "multi_match" : {
+          "query":"preeti", 
+          "fields": [ "domain", "username" ] 
+        }
+      }
+    }',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/_all',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/_all',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_update/3Lwz_YkBJgh-hdN-r7F7',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+  "doc": {
+"domain": "Match"
+}
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_doc/3Lwz_YkBJgh-hdN-r7F7',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'DELETE',
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_search',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_POSTFIELDS =>'{
+    "query": { "match_all" : {}}
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_search',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_POSTFIELDS =>'{
+             "size" : 150000000,
+    "query": { "match_all" : {}}
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+
+
+
+
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://elastic:Y*XdQOHyXXlHPBTHMm7R@208.115.214.46:9200/leakages/_settings',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'PUT',
+  CURLOPT_POSTFIELDS =>'{
+              "index.max_result_window": 150000000
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+
+
+
+Stripe
+
+
+ $cust= \Stripe\Customer::createSource(
+              $customer[0]->stripe_id,
+              ['source' => 'tok_visa']
+            );
+			
+			
+ $intent = \Stripe\PaymentIntent::create([
+              
+            'customer' => $customer[0]->stripe_id,
+            'amount' => $plan_prices[0]->price,
+            'currency' => 'gbp',
+            'metadata' => ['integration_check'=>'accept_a_payment'],
+            'description'=>'software development service',
+        ]);
+
+use Stripe;
+
+  \Stripe\Stripe::setApiKey('sk_test_51HjQDXAQ5RQRJ47soSyoh2a05r1lDS6zOcyZ5QdUiGcoW3JHdBH2L4DYsqiLHOeoDyB0qwOiERfjMZFRrZzGm8kI00SGdslvz9');
+       
+        $stripe = new \Stripe\StripeClient(
+              'sk_test_51HjQDXAQ5RQRJ47soSyoh2a05r1lDS6zOcyZ5QdUiGcoW3JHdBH2L4DYsqiLHOeoDyB0qwOiERfjMZFRrZzGm8kI00SGdslvz9'
+            );
+
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+  <html>
+  <head>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  
+  
+  <style>
+      /*========================3/2/2023-CSS-START============================*/
+.payment-form-main-section form#payment-form {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-direction: column;*/
+    height: 100%;
+}
+.payment-form-main-section {
+    width: 24%;
+    margin: 0 auto;
+}
+.payment-form-main-section form#payment-form {
+    background-color: #e1e4ff;
+    padding: 0px 30px 53px 30px;
+    border-radius: 4px;
+}
+body.payment-form-main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.payment-form-main-section form#payment-form .paynow {
+    background-color: #646fde;
+    color: #fff;
+    margin-top: 12px;
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #646fde;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    max-width: 100%;
+    cursor: pointer;
+}
+.payment-form-main-section svg {
+    width: 140px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.payment-form-main-section form#payment-form input {
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    max-width: 284px;
+}
+div#card-errors {
+    padding: 18px 0 10px 0;
+    display: block;
+}
+
+
+/*========================3/2/2023-CSS-END============================*/
+  </style>
+  
+  <body class="payment-form-main">
+        <div class="payment-form-main-section">
+        <form id="payment-form">
+            <div classs="stripe-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#646FDE" d="M11.319 9.242h1.673v5.805h-1.673zM4.226 13.355c0-2.005-2.547-1.644-2.547-2.403l.001.002c0-.262.218-.364.567-.368a3.7 3.7 0 0 1 1.658.432V9.434a4.4 4.4 0 0 0-1.654-.307C.9 9.127 0 9.839 0 11.029c0 1.864 2.532 1.561 2.532 2.365 0 .31-.266.413-.638.413-.551 0-1.264-.231-1.823-.538v1.516a4.591 4.591 0 0 0 1.819.382c1.384-.001 2.336-.6 2.336-1.812zM11.314 8.732l1.673-.36V7l-1.673.36zM16.468 9.129a1.86 1.86 0 0 0-1.305.527l-.086-.417H13.61V17l1.665-.357.004-1.902c.24.178.596.425 1.178.425 1.193 0 2.28-.879 2.28-3.016.004-1.956-1.098-3.021-2.269-3.021zm-.397 4.641c-.391.001-.622-.143-.784-.318l-.011-2.501c.173-.193.413-.334.795-.334.607 0 1.027.69 1.027 1.569.005.906-.408 1.584-1.027 1.584zm5.521-4.641c-1.583 0-2.547 1.36-2.547 3.074 0 2.027 1.136 2.964 2.757 2.964.795 0 1.391-.182 1.845-.436v-1.266c-.454.231-.975.371-1.635.371-.649 0-1.219-.231-1.294-1.019h3.259c.007-.087.022-.44.022-.602H24c0-1.725-.825-3.086-2.408-3.086zm-.889 2.448c0-.758.462-1.076.878-1.076.409 0 .844.319.844 1.076h-1.722zm-13.251-.902V9.242H6.188l-.004-1.459-1.625.349-.007 5.396c0 .997.743 1.641 1.729 1.641.548 0 .949-.103 1.171-.224v-1.281c-.214.087-1.264.398-1.264-.595v-2.395h1.264zm3.465.114V9.243c-.225-.08-1.001-.227-1.391.496l-.102-.496h-1.44v5.805h1.662v-3.907c.394-.523 1.058-.42 1.271-.352z"/></svg>
+                
+            </div>
+             <input type="text" value="{{ $data['name'] }}"  id="name" name="name" required>
+             <br>
+            <input type="email" value="{{ $data['email'] }}" id="email" name="email" required>
+            <br>
+            <input type="text" value="£ {{ $data['amount'] }}"  id="amount" name="amount" required>
+             
+             <div id="card-element">
+
+             </div>
+
+             <button id="submit" class="paynow">Pay Now</button>
+
+             <div id="card-errors" style="color: red;"></div>
+             <div id="card-thank" style="color: green;"></div>
+             <div id="card-message" style="color: green;"></div>
+             <div id="card-success" style="color: green;font-weight:bolder"></div>
+             
+             
+        </form>
+</div>
+    <script type="text/javascript">
+        
+        $('#card-success').text('');
+        $('#card-errors').text('');
+        var stripe = Stripe('pk_test_51HjQDXAQ5RQRJ47sxYjvmHwS4Tchi0Im1b4IgAo4WwP6zkaeppZgBbn09gUGJcRKUqP1ybUQBwzdEodidmrqwK2F00VcqP2oTl');
+        var elements = stripe.elements();
+        $('#submit').prop('disabled', true);
+        // Set up Stripe.js and Elements to use in checkout form
+        var style = {
+          base: {
+            color: "#32325d",
+          }
+        };
+
+        var card = elements.create("card", { style: style });
+        card.mount("#card-element");
+
+
+        card.addEventListener('change', ({error}) => {
+          const displayError = document.getElementById('card-errors');
+          if (error) {
+            displayError.textContent = error.message;
+            $('#submit').prop('disabled', true);
+
+          } else {
+            displayError.textContent = '';
+            $('#submit').prop('disabled', false);
+
+          }
+        });
+
+        var form = document.getElementById('payment-form');
+        
+        form.addEventListener('submit', function(ev) {
+        $('.loading').css('display','block');
+
+          ev.preventDefault();
+          //cardnumber,exp-date,cvc
+          stripe.confirmCardPayment('{{ $data["client_secret"] }}', {
+            payment_method: {
+              card: card,
+              billing_details: {
+                name: '{{ $data["name"] }}',
+                email: '{{ $data["email"] }}'
+              }
+            },
+            setup_future_usage: 'off_session'
+          }).then(function(result) {
+            $('.loading').css('display','none');
+           
+            if (result.error) {
+            
+              $('#card-errors').text(result.error.message);
+            
+            } else {
+              if (result.paymentIntent.status === 'succeeded') {
+                  
+                <?php $data = App\Models\Payment::where('subscription_price',$data["amount"])->update(['status'=>'active']) ?>
+                $('#card-success').text("payment successfully completed.");
+              console.log(stripe);
+                setTimeout(
+                  function(){ window.location.href = "{{url('/')}}"; 
+                }, 2000);
+              }
+              return false;
+            }
+          });
+        });
+    </script>
+<?php
+?>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  $data = array(
+           'name'=> $customer[0]->name,
+           'email'=> $customer[0]->email,
+           'amount'=> $plan_prices[0]->price,
+           'client_secret'=> $intent->client_secret,
+           'price'=>$intent->amount,
+        );
+
+
+
+
+
+$customer = \Stripe\Customer::create([
+          'name'=> $request->name,
+          'email' =>$request->email,
+          'phone'=>$request->phone,
+          'address'=>[
+          'line1'=> '510 Townsend St',
+          'postal_code'=> '98140',
+          'city'=>'San Francisco',
+          'state'=>'CA',
+          'country'=>'US',
+        ]
+        ]);		
+
+
+
+
+
+Git commands
+
+
+
+
+
+							
+										/******* credential of the kevin github account **************/
+										git hub account : Username: anilkumar
+										Password : 7XdX30Sm
+										email  : info@auspicioussoft.com
+										access token : glpat-Drj7PUej7MdE5novwHgC
+
+										/****************************************************************/
+
+										gitlab login
+
+										git config --global user.name "anilkumar"
+										git config --global user.email "anilkumar"
+
+
+										/** git command ****///
+										git init
+										git status
+										git add .
+
+										git commit -m "my first comit" 
+
+										git push -u origin "master"
+
+										git push -u "clone with http" master
+
+										git pull --rebase origin <branch name like master> 
+
+										/******************************////
+							
+							
+							
+							
+							/**********************************/
+								
+								cd existing_repo
+								git remote add origin https://gitlab.elula.cloud/kalamin/trucker-track.git
+								git branch -M main
+								git push -uf origin main
+
+							
+							/**********************************/
+							
+							/*******************************************************************************/
+								
+							pull command : 
+							
+							git pull origin <branch name>
+							
+							/********************************************************************************/
+							
+							
+							/********** git  hub *******************************************/
+							
+												echo "# rick" >> README.md
+												git init
+												git add README.md
+												git commit -m "first commit"
+												git branch -M main
+												git remote add origin https://github.com/Preeti206/kevin.git
+												git push -u origin main
+
+												…or push an existing repository from the command line
+
+												git remote add origin https://gitlab.elula.cloud/kalamin/trucker-track.git
+												git branch -M main
+												git push -u origin main
+												
+												
+												$2y$10$K26yE25lsqsrlBW9OB0JreAwuql2yi38Jc8hyroFClLP6QgDE.Nzq
+
+
+									
+					gitlab login details : 
+
+					user name :anilkumar
+
+					password : 7XdX30Sm
+Email in laravel
+
+1. Create a Mailable Class
+Run the following command to generate a Mailable class:
+bash
+Copy code
+php artisan make:mail PDFMail
+
+2. Modify the Mailable Class
+In app/Mail/PDFMail.php, modify it to handle the attachment:
+php
+Copy code
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class PDFMail extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $pdfPath;
+
+    public function __construct($pdfPath)
+    {
+        $this->pdfPath = $pdfPath;
+    }
+
+    public function build()
+    {
+        return $this->subject('Your PDF is here!')
+                    ->view('emails.pdf_mail') // Use a Blade view for the email body
+                    ->attach($this->pdfPath);
+    }
+}
+
+3. Create the Email View
+In resources/views/emails/pdf_mail.blade.php, you can create the body of the email:
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your PDF is Ready</title>
+</head>
+<body>
+    <h1>Hello,</h1>
+    <p>Please find the attached PDF.</p>
+</body>
+</html>
+
+4. Update the Controller
+Now, in your PDFController, use the new Mailable class:
+php
+Copy code
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use PDF;
+use App\Mail\PDFMail;
+use Illuminate\Support\Facades\Mail;
+
+class PDFController extends Controller
+{
+    public function sendPDF(Request $request)
+    {
+        // Generate PDF
+        $data = ['title' => 'Laravel PDF Example'];
+        $pdf = PDF::loadView('pdf_template', $data);
+        $pdfPath = storage_path('app/public/pdf-file.pdf');
+        $pdf->save($pdfPath);
+
+        // Send email with PDF attachment
+        $toEmail = $request->input('email');
+        Mail::to($toEmail)->send(new PDFMail($pdfPath));
+
+        return response()->json(['message' => 'PDF sent successfully']);
+    }
+}
+					
+					
+	
+
+
