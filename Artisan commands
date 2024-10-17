@@ -1,0 +1,351 @@
+//              LARAVEL ARTISAN COMMANDS
+ 
+
+
+			    php artisan serve  
+				
+			    php artisan make:controller CustomerController
+				
+                php artisan make:model Customerdetail --migration              itentification
+				
+			    composer install
+			    composer update  --with-all-dependencies
+				
+			    php artisan make:middleware Admin       APP/HTTP/MIDDLEWARE/ADMIN.PHP  
+			    composer require laravel/ui:*
+			    php artisan ui vue --auth    
+			    npm install
+			    npm run dev
+				php artisan migrate   
+				php artisan migrate:fresh	
+				php artisan route:list
+				php artisan cache:clear
+				php artisan passport:keys
+				php artisan passport:install
+				php artisan migrate:refresh --path=/database/migrations/2024_09_06_071036_create_orders_table.php
+				
+				
+				php artisan route:clear
+				php artisan --version
+				php artisan make:command CheckUsers
+				
+				cron-job command to hit ---  php artisan update:status
+				
+				
+				
+				
+				 
+
+                $table->string('brand_id')->nullable();
+                $table->string('name')->nullable();
+                $table->string('arabic_name')->nullable();
+                $table->string('status')->nullable();
+				
+				php artisan make:mail Warrantyexpired
+				
+				
+				Session::put('variableName', $value);
+				
+				Session::get('variableName');
+				
+				Session::put('selectedValueRef', 'CONTACT_SUPPLIER_LATER');
+				
+				
+**************************************************************************************************
+			
+			
+			Route::get('otp', function () {
+
+			return view('otp');
+
+			});
+			
+			
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('role')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('event_date')->nullable();
+            $table->string('event_city')->nullable();
+            $table->string('event_state')->nullable();
+			$table->string('guests')->nullable();
+			$table->string('start_time')->nullable();
+			$table->string('needed_hours')->nullable();
+			$table->string('budget_amount')->nullable();
+			
+
+					use gt = grater than :value|field
+
+					use gte = grater than equal :value|field
+
+					use lt = less than :value|field
+
+					use lte = less than equal :value|field
+
+					////////////////////////////////////////
+									 
+				 *********************************************************
+				 
+				 //////command////
+				 
+				 composer require yajra/laravel-datatables:*
+				 composer require yajra/laravel-datatables-oracle:^9.21.2
+				 
+				 ////////path////
+		
+				                   Yajra\DataTables\DataTablesServiceProvider::class,
+				 
+				   'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   
+
+				 php artisan vendor:publish --provider="Yajra\DataTables\DataTablesServiceProvider"
+				 
+				 
+		     	replace Datatables with DataTables
+
+
+				 
+				 <link  href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+				 
+				   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+				  
+				<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" defer></script> 
+
+				 
+				 composer create-project --prefer-dist laravel/laravel:^7.0 firebase
+				 
+				 composer create-project laravel/laravel:^8.0 Translate    
+
+
+				 
+				 
+				php artisan make:export OrderExport --model=Order 
+				
+				php artisan make:export UsersImport --model=Order
+				
+				php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config
+
+
+				 
+//////////////////////////////////////////////////////////////////IMAGE CODE//////////////////////////////////////////////////////////////////////                                       
+
+
+
+		$image = $request->file('image');
+         $name = time().'.'.$image->getClientOriginalExtension();
+         $destinationPath = public_path('images');
+        
+         $image->move($destinationPath, $name);
+         $UserModel->image=$name;			
+		 
+		  $data = Product::orderBy('date_created', 'desc')->take(100)->get();
+		 ////
+		 
+		 {{asset('images/'.$value->image)}}
+		 
+
+		 
+/////////////////////////////////////////////////////////////// JOIN ON TABLE///////////////////////////////////////////////////////////////////////////////////
+		 
+		 public function show()
+{
+    $usersDetails = DB::table('users')
+    ->join('usermodels', 'users.id', '=', 'usermodels.user_id')// joining the contacts table , where user_id and contact_user_id are same
+    ->select('users.*', 'usermodels.*')
+    ->get();
+
+    $usersDetails=compact('usersDetails');
+
+//   dd(  $usersDetails);
+
+    return view('show')->with($usersDetails);
+}
+	 
+	 //            ***************************************************************
+						 
+						  $usersDetails = DB::table('MAIN TABLE')
+						->join('ALTER TABLE', 'MAIN TABLE.id', '=', 'ALTER TABLE.user_id')  
+						->select('MAIN TABLE.*', 'ALTER TABLE.*')
+						->get();
+						 
+						     $usersDetails=compact('usersDetails');
+
+					//   dd(  $usersDetails);
+
+						return view('show')->with($usersDetails);
+}
+	 
+	 //         ***************************************************************
+  
+   
+
+
+ 
+ 
+//////////// //////////////  GMAIL APP PASSWORD test1   //////////////////////////////
+
+lkoodikjsinzwziz
+ 
+///////////////////////////////////////////////////////////////////////////////
+ 
+
+ 
+	/////////////////////////////////////////////pagination///////////////////////////////
+	
+	        paginate();
+	
+            <div class="pagination">
+             {{$data->links("pagination::bootstrap-4")}}
+			 {{$variable->links("pagination::bootstrap-4")}}
+            </div>
+			  
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////////
+	
+	 $abc=GoogleTranslate::trans( $products, 'fr');
+	
+
+//////////////////////////////////////////////////////////////////////
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden
+
+--------------------------------------------------------------------------
+https://partners.shopify.com/1628983/stores?search_value=wild
+
+https://admin.shopify.com/store/action-shop-no/apps/actionshop
+
+
+
+
+shopify main url
+
+///////////////////////////////////////////////////////////////
+
+HostGator account details:-
+
+link:-https://www.hostgator.com/my-account/login
+
+username:-anilauspicious@gmail.com
+
+passsword:-Anil##!@@#22211
+
+///////////////////////////////////////////////////////////////
+
+            commands code
+			
+			
+<?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
+use App\Models\Cart;
+
+class FetchProduct extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'update:status';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Update Status';
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return int
+     */
+
+  
+
+
+public function handle()
+{
+    // Fetch the cart items
+    $cartItems = Cart::get();
+    
+    // Loop through the cart items
+    foreach ($cartItems as $cart) {
+        
+        // Initialize cURL
+        $curl = curl_init();
+        
+        // Set cURL options
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.sandbox.viator.com/partner/bookings/status',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => json_encode([
+                "bookingRef" => $cart->bookingRef
+            ]),
+            CURLOPT_HTTPHEADER => array(
+                'Accept: application/json;version=2.0',
+                'Accept-Language: en-US',
+                'exp-api-key: f00b5de3-0d91-41ed-90d1-ad26c6b0e197',
+                'Content-Type: application/json'
+            ),
+        ));
+        
+        // Execute the request and get the response
+        $response = curl_exec($curl);
+        
+        // Close cURL
+        curl_close($curl);
+        
+        // Decode the response
+        $responseData = json_decode($response, true);
+        
+        // Check if the response has a status
+        if (isset($responseData['status'])) {
+            // Update the cart status in the database
+            $cart->status = $responseData['status'];
+            $cart->save();
+        }
+        
+        // Optionally, handle errors or log the response if needed
+        if (!$response || !isset($responseData['status'])) {
+            // Log or handle failed API calls
+            $this->error('Failed to update status for bookingRef: ' . $cart->bookingRef);
+        }
+
+        // Add a 1-second delay between each request
+        sleep(1);
+    }
+    
+    // Log completion message
+    $this->info('Successfully updated product statuses.');
+}
+
+
+
+}
